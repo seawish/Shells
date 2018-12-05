@@ -1,18 +1,18 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-# 脚本用途：上传并部署nziot-api:
-# 1. kill 旧的api
+# 脚本用途：上传并部署SpringBoot项目:
+# 1. kill 旧的jar进程
 # 2. 备份旧文件到jar所在目录下的子目录（目录名：yymmdd），删除nohup文件。
 #   备份的文件包括：logs, jar文件, application*
-# 3. 上传新的jar，部署脚本需要和jar处于同一目录，并且该目录下所有文件都会被上传。
-# 4. 运行nziot/nziot-api或nziot_api下的jar
+# 3. 上传新的jar，目录下所有文件都会被上传。
+# 4. 运行jar包
 #
 # 注意事项：
-# 需要在main中指定部署路径。
+# 
 # 在host_dic中添加部署节点。
 # 需要先安装paramiko: pip install paramiko
 # 将需要上传的文件放到同一目录, 执行命令(参数为待上传文件的父目录、服务器文件存储目录、待运行的jar):
-# 运行命令： python deploy-jar.py deploy_path remote_dir jar_name
+# 运行命令： python deploy-jar.py local_dir remote_dir jar_name
 
 import paramiko
 import time
