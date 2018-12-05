@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # 脚本用途：上传并部署SpringBoot项目:
 # 1. kill 旧的jar进程
